@@ -4,20 +4,51 @@ main = ->
   map = L.map("map").setView([
     51.505
     -0.09
-  ], 13)
-  L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>  contributors - used in aBitViral"
-    maxZoom: 18
+  ], 16)
+  # map server
+  server = "openstreetmap.org"     # format png
+  server = "stamen.com/watercolor" # format jpg
+  L.tileLayer("http://{s}.tile.#{server}/{z}/{x}/{y}.jpg",
+    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>  contributors"
+    maxZoom: 16
   ).addTo map
   map.locate
     setView: true
     maxZoom: 16
     timeout: 100000
 
+  #  almost-global variables
+  markers = []
+
+  locations = [
+    new L.LatLng(43.881200, 11.092421), # prato
+    new L.LatLng(43.825744, 11.130530), # campi
+    new L.LatLng(43.731795, 11.223742), # galluzzo
+    new L.LatLng(43.770871, 11.270176), # piazza beccaria
+    new L.LatLng(43.782320, 11.251208), # lago dei cigni
+    new L.LatLng(43.140239, 12.105642), # lago trasimeno
+    new L.LatLng(41.918044, 8.736798 ), # Ajaccio, corsica
+  ]
+
+
+  onMapClick = (evt) ->
+    idx = evt.target.idx
+    markers[idx].openPopup()
+
   location_found = (e) ->
     radius = e.accuracy / 2
-    L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup()
-    L.circle(e.latlng, radius).addTo map
+    L.marker(e.latlng).addTo(map).bindPopup("You").openPopup()
+
+
+    for loc in locations
+      markers.push L.marker(loc)
+
+    for marker, idx in markers
+      marker.addTo map
+      marker.bindPopup "User #{idx}"
+      marker.idx = idx
+      marker.on 'click', onMapClick
+
     log "your location: #{e.latlng}"
     return
 

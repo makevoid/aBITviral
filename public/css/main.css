@@ -3,10 +3,14 @@ body {
   padding: 0; }
 
 #map {
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 1; }
 
 #debug {
   position: absolute;
   bottom: 0;
   background: rgba(245, 245, 245, 0.7);
-  padding: 2px 5px; }
+  padding: 2px 5px;
+  z-index: 2; }
