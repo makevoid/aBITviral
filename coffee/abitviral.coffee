@@ -1,12 +1,12 @@
 main = ->
-  log "hello world"
+  log "aBitViral started"
   L.Icon.Default.imagePath = "/imgs/vendor/leaflet"
   map = L.map("map").setView([
     51.505
     -0.09
   ], 13)
   L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>  contributors"
+    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>  contributors - used in aBitViral"
     maxZoom: 18
   ).addTo map
   map.locate
@@ -18,6 +18,7 @@ main = ->
     radius = e.accuracy / 2
     L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup()
     L.circle(e.latlng, radius).addTo map
+    log "your location: #{e.latlng}"
     return
 
   location_error = (e) ->

@@ -1,5 +1,18 @@
+:ruby
+  PATH = File.expand_path "../", __FILE__
+  def partial(partial_name)
+  view = File.read "#{PATH}/haml/_#{partial_name}.haml"
+
+  engine = Haml::Engine.new view
+  haml_concat engine.render
+  end
+
 !!!
 %html
   %head
-    %title aBitViral
+    - partial :header
   %body
+    #map
+    #debug
+    %script{ src: "/js/vendor/leaflet.js"}
+    %script{ src: "/js/abitviral.js" }

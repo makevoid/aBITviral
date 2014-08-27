@@ -8,6 +8,15 @@ aBitViral (ABV) is changetip in the real world (tnx internet, tnx mobile devices
 [web + android + ios]
 
 ---
+default main:
+
+[tip people]
+[find tips near you]
+
+
+TIPPER (not the right word:)
+
+---
 main view:
 
   "Your Address:"
@@ -29,6 +38,28 @@ settings view
   range
 
 
+>>>>>
+
+TIPPED
+
+---
+find tip (map)
+
+  map
+  minimal ui
+  button: ask friend to join:  sharable link - email address / sms number
+
+
+
+>>>
+service - implementation details
+
+  location loopback (all clients send location)
+  API server (TODO: setup, use and document HTTPS config on production environment)
+
+  server notifies clients
+    JSON API -
+    slow polling (1 min)
 
 
 
