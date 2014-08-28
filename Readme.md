@@ -83,6 +83,20 @@ You are free to use this code and free to contribute to the project.
 ---
 
 
+### API Implementation details
+
+geo query:
+
+SELECT id, name,
+6371 * 2 * ASIN(SQRT(POWER(SIN(RADIANS(orig.lat - ABS(hotels.latitude))), 2) + COS(RADIANS(orig.lat)) * COS(RADIANS(ABS(hotels.latitude))) * POWER(SIN(RADIANS(orig.long - hotels.longitude)), 2))) AS distance
+FROM hotels
+HAVING distance < 10
+ORDER BY distance LIMIT 10;
+
+
+TODO: use scalable query
+http://vinsol.com/blog/2011/08/30/geoproximity-search-with-mysql/
+
 
 notes:
 
