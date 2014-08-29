@@ -1,14 +1,9 @@
 :ruby
   PATH = File.expand_path "../", __FILE__
-  def partial(partial_name)
-  view = File.read "#{PATH}/haml/_#{partial_name}.haml"
-
-  engine = Haml::Engine.new view
-  haml_concat engine.render
-  end
+  require "#{PATH}/lib/helpers"
 
 !!!
-%html
+%html 
   %head
     - partial :header
   %body
