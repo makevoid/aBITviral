@@ -17,7 +17,7 @@ main = function() {
     timeout: 100000
   });
   markers = [];
-  locations = [new L.LatLng(43.881200, 11.092421), new L.LatLng(43.825744, 11.130530), new L.LatLng(43.731795, 11.223742), new L.LatLng(43.770871, 11.270176), new L.LatLng(43.782320, 11.251208), new L.LatLng(43.140239, 12.105642), new L.LatLng(41.918044, 8.736798)];
+  locations = [new L.LatLng(43.881200, 11.092421), new L.LatLng(43.825744, 11.130530), new L.LatLng(43.731795, 11.223742), new L.LatLng(43.770871, 11.270176), new L.LatLng(43.782320, 11.251208), new L.LatLng(43.140239, 12.105642), new L.LatLng(41.918044, 8.736798), new L.LatLng(43.774622, 11.250312), new L.LatLng(43.774900, 11.255655), new L.LatLng(43.768501, 11.251299), new L.LatLng(43.775970, 11.256728)];
   onMapClick = function(evt) {
     var idx;
     idx = evt.target.idx;

@@ -21,6 +21,7 @@ main = ->
   markers = []
 
   locations = [
+    # posti scelti completamente a caso - places selected "randomly"
     new L.LatLng(43.881200, 11.092421), # prato
     new L.LatLng(43.825744, 11.130530), # campi
     new L.LatLng(43.731795, 11.223742), # galluzzo
@@ -28,6 +29,10 @@ main = ->
     new L.LatLng(43.782320, 11.251208), # lago dei cigni
     new L.LatLng(43.140239, 12.105642), # lago trasimeno
     new L.LatLng(41.918044, 8.736798 ), # Ajaccio, corsica
+    new L.LatLng(43.774622, 11.250312), # piazza stazione incrocio
+    new L.LatLng(43.774900, 11.255655), # via gori
+    new L.LatLng(43.768501, 11.251299), # arno river
+    new L.LatLng(43.775970, 11.256728), # somewhere in the center
   ]
 
 

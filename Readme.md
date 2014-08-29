@@ -1,9 +1,21 @@
 # aBitViral
 
+Help spread bitcoin in your area via microdonations!
+Get your first bitcoins by looking around you!
+
+
+choose: donate or get bitcoins
+
+
 aBitViral (ABV) is changetip in the real world (tnx internet, tnx mobile devices, tnx geolocation)
 
 
 ### Mobile App:
+
+demo finder screen:
+
+![](http://uploads.makevoid.com/ios_finder_demo.png)
+
 
 [web + android + ios]
 
