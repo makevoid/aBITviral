@@ -1,11 +1,12 @@
-:ruby
-  PATH = File.expand_path "../", __FILE__
-  require "#{PATH}/lib/helpers"
-
+- require_relative "lib/helpers"
 !!!
 %html
   %head
     - partial :header
   %body
+    -# - filter do
+    -#   [finder]
+    -#   [donor]
+    %a{ href: "/donor"  } Donate bitcoins
+    %a{ href: "/finder" } Find bitcoins
     - partial :footer
-    #map

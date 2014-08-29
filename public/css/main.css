@@ -14,3 +14,10 @@ body {
   background: rgba(245, 245, 245, 0.7);
   padding: 2px 5px;
   z-index: 2; }
+
+body > a {
+  padding: 30px 7%;
+  display: inline-block;
+  border: 1px solid #ddd; }
+  body > a:hover {
+    background: #eee; }

@@ -17,7 +17,39 @@ demo finder screen:
 ![](http://uploads.makevoid.com/ios_finder_demo.png)
 
 
+*platforms:*
+
 [web + android + ios]
+
+### Donor:
+
+- deposit some btc in your ABV hosted wallet
+- choose the amount in % you want to donate each time
+- set the minimum time from one donation to the other
+- walk/be in the nearest city centre with the app open to
+- click [Stick donation here] to let the donation stay in the place even if your app is closed
+
+### Finder:
+
+- [get a bitcoin wallet](https://bitcoin.org/en/choose-your-wallet)
+- open the app
+- search for a donor
+- walk by
+- find them thank them (optional)
+
+
+
+### deploy versions timeline
+
+
+- alpha
+- add bots
+- add HTTPS
+- beta
+- conduce broad tests, scale it up
+- 1.0
+
+### views:
 
 ---
 default main:

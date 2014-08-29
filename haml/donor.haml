@@ -1,0 +1,14 @@
+- require_relative "lib/helpers"
+!!!
+%html
+  %head
+    - partial :header
+  %body
+    %h1 Deposit BTC
+    %p 1abcd....blabla
+    %img{ src: "/imgs/qr.png" } [qr code]
+
+    %p Deposit the amount of bitcoins you want to donate:
+    %input{ name: "amount", type: "text" }
+
+    - partial :footer
