@@ -37,7 +37,15 @@ label {
   display: block; }
 
 h1 {
-  font-size: 1.4em; }
+  font-size: 1.3em; }
+
+body > h1 {
+  font-size: 1.4em;
+  text-align: center; }
+
+h1 > a {
+  left: 3%;
+  position: absolute; }
 
 body > h1 {
   padding: 0 3%; }
@@ -52,4 +60,20 @@ input {
 
 .right {
   text-align: right;
-  float: right; }
+  float: right;
+  right: 0;
+  display: inline-block;
+  width: auto; }
+
+.over {
+  position: absolute;
+  z-index: 3; }
+
+label {
+  position: relative; }
+
+.over_input {
+  position: absolute;
+  right: 0;
+  margin-right: 3%;
+  top: 50%; }

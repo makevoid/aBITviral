@@ -4,9 +4,10 @@
   %head
     - partial :header
   %body
-    %h1 Settings
+    %h1
+      Settings
+      %a{ href: "/donor.html" } < Donor
 
-    %a{ href: "/donor.html" } Donor
 
     :ruby
       total = 0
@@ -18,11 +19,13 @@
 
       %label
         Donate each time
-        %input{ name: "amount", placeholder: "5" } %
+        %input{ name: "amount", placeholder: "5" }
+        .over_input %
       %p
         #{amount} mBTC
         -# (#{amount_usd}$)
 
       %label
         Range
-        %input{ name: "range", placeholder: "30m" }
+        %input{ name: "range", placeholder: "30" }
+        .over_input meters
