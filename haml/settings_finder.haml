@@ -1,0 +1,12 @@
+- require_relative "lib/helpers"
+!!!
+%html
+  %head
+    - partial :header
+  %body
+    %h1 Settings
+
+    .content
+      %p Your Address
+      %input{ name: "address", placeholder: "1xyz...." }
+      %input{ value: "Save", type: "submit" }

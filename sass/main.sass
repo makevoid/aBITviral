@@ -1,6 +1,18 @@
+$main_color: #C00
+
+*
+  box-sizing: border-box
+
 body
   margin: 0
   padding: 0
+  font-family: Arial, Verdana, sans-serif
+
+a
+  text-decoration: none
+  color: $main_color
+  &:hover
+    color: lighten($main_color, 0.3)
 
 #map
   height: 100%
@@ -15,9 +27,32 @@ body
   padding: 2px 5px
   z-index: 2
 
-body > a
-  padding: 30px 7%
+body > a, body .content > a
+  padding: 30px 3%
+  width: 100%
   display: inline-block
   border: 1px solid #ddd
   &:hover
     background: #eee
+
+label
+  display: block
+
+h1
+  font-size: 1.4em
+
+body > h1
+  padding: 0 3%
+
+
+input
+  font-size: 1.2em
+  padding: 3% 3%
+  width: 100%
+
+.content
+  margin: 0 3%
+
+.right
+  text-align: right
+  float: right

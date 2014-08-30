@@ -4,11 +4,17 @@
   %head
     - partial :header
   %body
-    %h1 Deposit BTC
-    %p 1abcd....blabla
-    %img{ src: "/imgs/qr.png" } [qr code]
+    %h1 Balance
 
-    %p Deposit the amount of bitcoins you want to donate:
-    %input{ name: "amount", type: "text" }
+    %a{ href: "/finder.html" }          Finder
+    %a{ href: "/settings_donor.html" }  Settings
 
-    - partial :footer
+    .content
+
+      %h1 Your Address:
+      %input{ name: "amount", type: "text", placeholder: "generating address..." }
+      %p balance: 0
+
+      %a{ href: "/add_funds.html" }   Add funds
+
+

@@ -11,14 +11,20 @@
     
   </head>
   <body>
-    <h1>Balance</h1>
-    <a href='/finder.html'>Finder</a>
-    <a href='/settings_donor.html'>Settings</a>
+    <h1>Add funds</h1>
+    <a href='settings_donor.html'>Settings</a>
     <div class='content'>
-      <h1>Your Address:</h1>
-      <input name='amount' placeholder='generating address...' type='text'>
-      <p>balance: 0</p>
-      <a href='/add_funds.html'>Add funds</a>
+      <p>1abcd....blabla</p>
+      <img src='/imgs/qr.png'>[qr code]</img>
+      <p>Deposit the amount of bitcoins you want to donate:</p>
+      <label>
+        Amount:
+        <input name='amount' type='text'>
+      </label>
+      <div id='debug'></div>
+      <script src='/js/vendor/leaflet.js'></script>
+      <script src='/js/abitviral.js'></script>
+      
     </div>
   </body>
 </html>

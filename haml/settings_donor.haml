@@ -1,0 +1,28 @@
+- require_relative "lib/helpers"
+!!!
+%html
+  %head
+    - partial :header
+  %body
+    %h1 Settings
+
+    %a{ href: "/donor.html" } Donor
+
+    :ruby
+      total = 0
+      amount = "x"
+      amount_usd = "y"
+
+    .content
+      %p Your account: #{total} mBTC
+
+      %label
+        Donate each time
+        %input{ name: "amount", placeholder: "5" } %
+      %p
+        #{amount} mBTC
+        -# (#{amount_usd}$)
+
+      %label
+        Range
+        %input{ name: "range", placeholder: "30m" }
