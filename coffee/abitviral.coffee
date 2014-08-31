@@ -1,4 +1,56 @@
+app = {}
+
+app.host = "http://localhost:3001/"
+
+app.bc_host = "http://blockchain.info/api.."
+app.current_user = null
+
+app.index = ->
+  app.current_user = @login()
+
+  @test()
+
+app.test = ->
+  http
+    url: "#{@host}test",
+    method: "get",
+    success: (xhr) ->
+      test = json(xhr.response).message
+      console.log "test xhr: #{test}"
+
+app.people_nearby = (lat, lng) ->
+  # TODO
+  true
+
+app.broadcast_location = (lat, lng) ->
+  # TODO
+  true
+
+app.balance = ->
+  http
+    url: "#{@host}balance",
+    method: "get",
+    success: (data) ->
+      console.log data
+
+app.login = ->
+  store = localStorage
+  if store.abv_account
+    store.abv_account
+  else
+    store.abv_account = @generate_password()
+
+app.generate_password = ->
+  abv.crypto.random_password 10
+
+
+
 main = ->
+  app.index()
+
+  #########
+
+
   log "aBitViral started"
   L.Icon.Default.imagePath = "/imgs/vendor/leaflet"
   map = L.map("map").setView([

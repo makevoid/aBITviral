@@ -1,7 +1,65 @@
-var log, main;
+var app, log, main;
+
+app = {};
+
+app.host = "http://localhost:3001/";
+
+app.bc_host = "http://blockchain.info/api..";
+
+app.current_user = null;
+
+app.index = function() {
+  app.current_user = this.login();
+  return this.test();
+};
+
+app.test = function() {
+  return http({
+    url: "" + this.host + "test",
+    method: "get",
+    success: function(xhr) {
+      var test;
+      test = json(xhr.response).message;
+      return console.log("test xhr: " + test);
+    }
+  });
+};
+
+app.people_nearby = function(lat, lng) {
+  return true;
+};
+
+app.broadcast_location = function(lat, lng) {
+  return true;
+};
+
+app.balance = function() {
+  return http({
+    url: "" + this.host + "balance",
+    method: "get",
+    success: function(data) {
+      return console.log(data);
+    }
+  });
+};
+
+app.login = function() {
+  var store;
+  store = localStorage;
+  if (store.abv_account) {
+    return store.abv_account;
+  } else {
+    return store.abv_account = this.generate_password();
+  }
+};
+
+app.generate_password = function() {
+  return abv.crypto.random_password(10);
+};
 
 main = function() {
   var location_error, location_found, locations, map, markers, onMapClick, server;
+  app.index();
   log("aBitViral started");
   L.Icon.Default.imagePath = "/imgs/vendor/leaflet";
   map = L.map("map").setView([51.505, -0.09], 16);

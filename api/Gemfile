@@ -1,4 +1,18 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem "json"
 gem "sinatra"
+gem "json"
+
+
+gem "dm-core"
+gem "dm-migrations"
+
+gem "dm-sqlite-adapter"
+# gem "dm-mysql-adapter" # or postgres-adapter, for the final version
+
+
+group :development, :test do
+  gem "rspec-core"
+  gem "rspec-mocks"
+  gem "rspec-expectations"
+end

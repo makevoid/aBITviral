@@ -12,6 +12,9 @@ a {
   a:hover {
     color: #ce0000; }
 
+body > h1 {
+  color: #C00; }
+
 #map {
   height: 100%;
   width: 100%;
@@ -45,7 +48,12 @@ body > h1 {
 
 h1 > a {
   left: 3%;
-  position: absolute; }
+  position: absolute;
+  font-size: 0.8em;
+  margin-top: 4px; }
+
+h1 > a.option {
+  right: 3%; }
 
 body > h1 {
   padding: 0 3%; }
