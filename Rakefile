@@ -18,6 +18,7 @@ class Buildr
   end
 
   def self.guard
+    puts `kill $(ps aux | grep 'bin/guard' | awk '{print $2}')`
     puts `bundle exec guard`
   end
 end
