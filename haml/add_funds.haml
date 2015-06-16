@@ -3,7 +3,7 @@
 %html
   %head
     - partial :header
-  %body
+  %body.add_funds
     %h1
       Add funds
       %a{ href: "settings_donor.html" } < Settings
@@ -19,4 +19,3 @@
         %input{ name: "amount", type: "text" }
 
       - partial :footer
-
